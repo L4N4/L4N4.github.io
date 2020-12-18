@@ -105,6 +105,9 @@ body.de_light {
 #wrapper {
 	overflow: hidden;
 }
+header .logoStyle {
+    display: none;
+}
 .de-navbar-left #wrapper {
 	overflow: visible;
 }
@@ -150,10 +153,11 @@ header:not(.header-mobile).autoshow.scrollOn {
 header:not(.header-mobile).autoshow.scrollOff {
 	top: -120px;
 }
-header div#logo a img{
+header div#logoStyle img{
 	display: inline-block;
-	height: 70px;
-	width: auto;
+	padding-top: 2px;
+	width: 250px;
+	height: auto;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-ms-transition: all 0.3s;
@@ -206,6 +210,15 @@ header.smaller.header-light div#logo .logo {
 }
 .logo-small {
 	margin-bottom: 20px;
+}
+header .logo, header .logoStyle{
+    font-family:"Nunito";
+    color:#fff;
+    font-size:40px;
+    font-weight:300;
+}
+header .logoStyle{
+    color:#333;
 }
 header.de_header_2 {
 	height: 125px;
@@ -265,6 +278,9 @@ header.de_header_2.smaller {
 .de-navbar-left header #mainmenu>li>a:after {
 	content: none;
 }
+header.smaller.scroll-light div#logo .logoStyle {
+    display: inline-block;
+}
 .de-navbar-left header nav {
 	float: none;
 }
@@ -289,6 +305,9 @@ header.de_header_2.smaller {
 	font-size: 32px;
 	text-transform: uppercase;
 	font-weight: 600;
+}
+.logo-smaller div#logo .logoStyle {
+    display: inline-block;
 }
 #subheader h2 {
 	position: relative;
@@ -727,7 +746,7 @@ header.header-mobile.header-light {
 header.header-light .logo{
 	display:none;
 }
-header.header-light .logo-2{
+header.header-light .logoStyle{
 	display:inline-block;
 }
 #de-sidebar {
@@ -830,11 +849,17 @@ header.header-light .logo-2{
 	font-size: 13px;
 	letter-spacing: 3px;
 }
+header.header-mobile .logoStyle {
+    display: inline-block;
+}
 .de_light .blog-list .date-box .month {
 	border-bottom-color: #ddd;
 }
 .de_light .text-light .blog-list .date-box .month {
 	color: #fff;
+}
+header.header-light .logoStyle{
+    display:inline-block;
 }
 .blog-snippet li {
 	border-bottom: none;
@@ -1092,7 +1117,7 @@ header.header-light .logo-2{
 	color:#555555;
 } */
 
-/* 
+/*
 .de_light #contact_form.s2 input[type=text], .de_light #contact_form.s2 textarea, .de_light #contact_form.s2 input[type=email], .de_light #search {
 	background:#eee;
 	color:#333;
@@ -1258,7 +1283,7 @@ background: none;
 border-radius:3px;
 }
 
-address span.adrss, address span.adrss a {	
+address span.adrss, address span.adrss a {
 color: #fff;
 }
 
@@ -1918,13 +1943,10 @@ h1 {
 	margin: 0;
 }
 
-div a h1#logoStyle {
-	font-family: cursive;
-	font-weight: bolder;
+div a div#logoStyle {
 	margin: 0;
 	float: left;
-	padding-top: 1%;
-	padding-right: 50%;
+	padding-right: 20%;
 	-webkit-text-stroke: 1px #fff;
 }
 h1 .small-border {
@@ -6898,6 +6920,11 @@ a, img {
 		float: left;
 		width: 23.95%;
 	}
+	header div#logoStyle img {
+		padding-top: 7px;
+		max-width: 200px;
+		height: auto;
+	}
 }
 
 /* --------------------------------------------------
@@ -6907,6 +6934,10 @@ a, img {
 @media (min-width: 768px) and (max-width: 979px) {
 	.slider_text {
 		padding-top: 0px;
+	}
+	header div#logoStyle img {
+		max-width: 200px;
+		height: auto;
 	}
 }
 @media only screen and (max-width: 992px) {
@@ -6934,7 +6965,7 @@ a, img {
 	div#logo {
 		margin-top: -15px;
 	}
-	#logo, #logo .inner {
+	#logoStyle, #logo .inner {
 		vertical-align: middle;
 		height: auto;
 	}
@@ -7097,6 +7128,13 @@ a, img {
 	}
 	header.header-mobile #mainmenu li ul li:last-child a {
 		border-bottom: none;
+	}
+	header.side-header #logo .logoStyle {
+        display: inline-block;
+        position: absolute;
+        height: 30px;
+        top: 15px;
+        left: 40px;
 	}
 	header.header-mobile #mainmenu li a {
 		color: #888;
@@ -7372,9 +7410,10 @@ a, img {
 	.feature-box-image, .pricing-box {
 		margin-bottom: 30px;
 	}
-	header div#logo img {
-		max-width: 200px;
+	header div#logoStyle img {
+		max-width: 550px;
 		height: auto;
+		padding-right: 30%;
 	}
 }
 
@@ -7394,7 +7433,7 @@ a, img {
 	.text-item i {
 		font-size: 24px;
 	}
-	header div#logo img {
+	header div#logoStyle img {
 		max-width: 200px;
 		height: auto;
 	}
@@ -7405,5 +7444,10 @@ a, img {
 		display: block;
 		margin: 0;
 		padding: 0;
+	}
+	header div#logoStyle img {
+		max-width: 550px;
+		height: auto;
+		padding-right: 30%;
 	}
 }
