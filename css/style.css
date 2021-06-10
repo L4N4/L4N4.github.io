@@ -5486,6 +5486,11 @@ section .color-overlay {
 	color: #fff;
 	background: #333;
 }
+
+#carousel-3{
+	display: flex;
+}
+
 .project-images img {
 	margin-bottom: 60px;
 }
